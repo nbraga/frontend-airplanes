@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Promotions from "./pages/Promotions";
 import Register from "./pages/Register";
 import Sac from "./pages/Sac";
+import Purchase from "./pages/Purchase";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,6 +26,7 @@ function App() {
         <Route path="promotions" element={<Promotions />} />
         <Route path="about" element={<About />} />
         <Route path="sac" element={<Sac />} />
+        <Route path="purchase" element={<Purchase />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

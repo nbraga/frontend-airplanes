@@ -71,9 +71,12 @@ const Promotions = () => {
                           alt={item.nome}
                         />
                         <div className="courses-overlay">
-                          <button className="btn btn-outline-primary border-2 w-100 mt-2">
+                          <a
+                            href="/purchase"
+                            className="btn btn-outline-primary border-2 w-100"
+                          >
                             Realizar Compra
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>

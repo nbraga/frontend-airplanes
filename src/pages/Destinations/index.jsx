@@ -66,9 +66,12 @@ const Destinations = () => {
                           alt={item.nome}
                         />
                         <div className="courses-overlay">
-                          <button className="btn btn-outline-primary border-2 w-100">
+                          <a
+                            href="/purchase"
+                            className="btn btn-outline-primary border-2 w-100"
+                          >
                             Realizar Compra
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
