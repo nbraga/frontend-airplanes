@@ -28,10 +28,6 @@ const pages = [
     description: "Contato",
     ancora: "/about",
   },
-  {
-    description: "Login",
-    ancora: "/login",
-  },
 ];
 
 const Header = () => {

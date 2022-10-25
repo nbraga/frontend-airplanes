@@ -4,7 +4,7 @@ import App from "../../layouts/App";
 const About = () => {
   return (
     <App>
-      <main className="main">
+      <main className="main my-5">
         <div className="container-xxl py-6">
           <div className="container">
             <div className="row g-5">
@@ -14,9 +14,9 @@ const About = () => {
                     title="mapa"
                     className="position-relative w-100 h-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15937.157066500053!2d-59.958454370498615!3d-3.0167313813662187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1a332b482f2f%3A0xa720275164411e62!2sR.%2024%20-%20Cidade%20Nova%2C%20Manaus%20-%20AM%2C%2069099-430!5e0!3m2!1spt-BR!2sbr!4v1656352527387!5m2!1spt-BR!2sbr"
-                    frameborder="0"
+                    frameBorder="0"
                     aria-hidden="false"
-                    tabindex="0"
+                    tabIndex="0"
                   ></iframe>
                 </div>
               </div>
@@ -38,7 +38,7 @@ const About = () => {
                           id="name"
                           placeholder="Your Name"
                         />
-                        <label for="name">Seu Nome</label>
+                        <label htmlFor="name">Seu Nome</label>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -49,7 +49,7 @@ const About = () => {
                           id="email"
                           placeholder="Your Email"
                         />
-                        <label for="email">Seu Email</label>
+                        <label htmlFor="email">Seu Email</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -60,7 +60,7 @@ const About = () => {
                           id="subject"
                           placeholder="Subject"
                         />
-                        <label for="subject">Título</label>
+                        <label htmlFor="subject">Título</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -70,7 +70,7 @@ const About = () => {
                           placeholder="Leave a message here"
                           id="message"
                         ></textarea>
-                        <label for="message">Mensagem</label>
+                        <label htmlFor="message">Mensagem</label>
                       </div>
                     </div>
                     <div className="col-12">

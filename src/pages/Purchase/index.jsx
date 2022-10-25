@@ -1,16 +1,12 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import App from "../../layouts/App";
-
-const theme = createTheme();
 
 export default function SignUp() {
   const [nome, setNome] = useState("");
@@ -35,89 +31,86 @@ export default function SignUp() {
 
   return (
     <App>
-      <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
-          <CssBaseline />
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            minHeight: "100vh",
+            my: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Typography component="h1" variant="h5">
+            Confirme seus dados para confirmar a compra
+          </Typography>
           <Box
-            sx={{
-              minHeight: "100vh",
-              my: 8,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
           >
-            <Typography component="h1" variant="h5">
-              Confirme seus dados para confirmar a compra
-            </Typography>
-            <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
-              sx={{ mt: 3 }}
-            >
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    autoComplete="given-name"
-                    name="firstName"
-                    required
-                    fullWidth
-                    id="firstName"
-                    label="Nome"
-                    autoFocus
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="lastName"
-                    label="Sobrenome"
-                    name="lastName"
-                    autoComplete="family-name"
-                    value={sobrenome}
-                    onChange={(e) => setSobrenome(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="email"
-                    label="Email"
-                    name="email"
-                    autoComplete="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </Grid>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="given-name"
+                  name="firstName"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="Nome"
+                  autoFocus
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                />
               </Grid>
-              {!loading ? (
-                <Button
-                  type="submit"
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
                   fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  Confirmar
-                </Button>
-              ) : (
-                <Button
-                  disabled
-                  variant="contained"
+                  id="lastName"
+                  label="Sobrenome"
+                  name="lastName"
+                  autoComplete="family-name"
+                  value={sobrenome}
+                  onChange={(e) => setSobrenome(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
                   fullWidth
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  Confirmando...
-                </Button>
-              )}
-            </Box>
+                  id="email"
+                  label="Email"
+                  name="email"
+                  autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Grid>
+            </Grid>
+            {!loading ? (
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Confirmar
+              </Button>
+            ) : (
+              <Button
+                disabled
+                variant="contained"
+                fullWidth
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Confirmando...
+              </Button>
+            )}
           </Box>
-        </Container>
-      </ThemeProvider>
+        </Box>
+      </Container>
     </App>
   );
 }
